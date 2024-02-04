@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://bootswatch.com/5/superhero/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="icon" href="icone.png" type="image/png">
+    
+    <title>Gerenciador de Clientes</title>
+    <!-- Adicione os estilos CSS necessários aqui -->
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="py-2" id="tabela">
+        <div class="container ">
+                
+          <div class="row">
+            <div class="mx-auto col-md-8 ">
+              <h3 class="mb-3">Agendamento</h3>
+              
+            </div>
+          </div>
+            
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6 col-6">
+                  <button class="btn btn-success btn-block btn-sm my-1 text-dark" id="adicionar">
+                    <i class="fa fa-plus fa-fw"></i>Adicionar </button>
+                </div>
+                <div class="col-md-6 col-6">
+                  <!-- <button class="btn btn-primary btn-block my-1" id="zerar">
+                    <i class="fa fa-plus fa-fw"></i>Zerar </button> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" if="datahoje">
+              <!-- <h5 class="text-right my-2" id="datahoje">#</h5> -->
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="table-responsive">
+                <table class="table table-hover" id="tabela">
+                  <thead class="text-light">
+                    <tr>
+                    <th class="text-light text-center" id="noprint"><i class="fa fa-fw fa-1x py-1 fa-pencil-square-o"></i></th>
+                      <th class="text-light">Data</th>
+                      <th class="text-light">Descrição</th>
+                      <th class="text-light text-center" id="noprint"><i class="fa fa-fw fa-1x py-1 fa-trash"></i></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                    <tfoot>
+                  <tr>
+    
+        </tr></tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-6">
+                <button class="btn btn-danger btn-block my-1 text-dark btn-sm " id="zerar">
+                    <i class="fa fa-list fa-fw"></i>Zerar </button>
+            </div>
+            <div class="col-md-6 col-6">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="py-5 d-none" id="formulario">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="">Cadastrar/Alterar</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <form id="form">
+                <div class="form-group"> <label>Data</label> 
+                  <input id="data_atendimento" data-index="new" type="date" class="form-control" placeholder="data_atendimento" required="required"> <small class="form-text text-muted">Data &nbsp;</small> </div>
+                <div class="form-group"> <label>Descrição</label> 
+                  <input id="descricao" type="text" class="form-control" placeholder="descricao" required="required"><small class="form-text text-muted">descricao</small> </div>
+                
+              </form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <button type="submit" class="btn btn-success btn-block" id="salvar">
+                        Salvar
+                      </button>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <button type="submit" class="btn btn-danger btn-block" id="cancelar">
+                        Cancelar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
