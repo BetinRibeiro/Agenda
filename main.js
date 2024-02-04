@@ -77,15 +77,7 @@ const isValidFields = () => document.getElementById('form').reportValidity()
 const atualizar = (index, cliente) => {
     const dbcliente = lerCliente()
     dbcliente[index] = cliente
-    salvarClientesOrdenados(dbcliente)
-}
-
-const salvarClientesOrdenados = (clientes) => {
-    // Ordenar os clientes com base na data de atendimento
-    clientes.sort((a, b) => new Date(a.data_atendimento) - new Date(b.data_atendimento))
-
-    // Salvar os clientes ordenados no armazenamento local
-    setArmazenamentoLocal(clientes)
+    setArmazenamentoLocal(dbcliente)
 }
 
 const salvarFormulario = () => {
